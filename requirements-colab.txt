@@ -1,4 +1,0 @@
-sdeint==0.3.0
-gradio>=6.30
-plotly>=7.1
-sympy>=1.14
