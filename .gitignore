@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments and secrets
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Gradio
+.gradio/
+
+# Generated output
+logs_conversion/
+figures/
+*.jpg
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
