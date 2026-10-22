@@ -129,7 +129,6 @@ class NetworkInterface(NetworkEquations):
 
         self.plotter = Plotter(features, self._style_config())
 
-        self.gradio_interface()
 
     def _style_config(self) -> dict:
         return {
