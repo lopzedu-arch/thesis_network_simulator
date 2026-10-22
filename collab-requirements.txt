@@ -1,0 +1,14 @@
+# Requirements for Google Colab
+#
+#   !pip install -q -r collab-requirements.txt
+#
+# Colab already ships numpy, scipy, matplotlib, pandas and Jupyter. They are
+# NOT listed here on purpose: reinstalling numpy/scipy over the preinstalled
+# ones can break the Colab runtime. The app needs matplotlib >= 3.6, which
+# every current Colab image has.
+#
+# Minimum versions are the ones the app was tested with.
+sdeint==0.3.0          # Itô SDE solver (stochastic tabs)
+gradio>=6.3            # user interface
+plotly>=6.5            # interactive figures (3-D phase space, plot customization)
+sympy>=1.14            # symbolic Jacobian for the sensitivity analysis
