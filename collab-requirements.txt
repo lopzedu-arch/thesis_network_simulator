@@ -1,0 +1,9 @@
+# Requirements for Google Colab
+#
+#   !pip install -q -r collab-requirements.txt
+#
+# Minimum versions are the ones the app was tested with.
+sdeint==0.3.0          # Itô SDE solver (stochastic tabs)
+gradio>=6.3            # user interface
+plotly>=6.5            # interactive figures (3-D phase space, plot customization)
+sympy>=1.14            # symbolic Jacobian for the sensitivity analysis
