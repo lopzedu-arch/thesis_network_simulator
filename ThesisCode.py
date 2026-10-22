@@ -126,9 +126,10 @@ class NetworkInterface(NetworkEquations):
         self.last_bifurcation_fig = None
         self.last_sensitivity_fig = None
         self.sensitivity = SensitivityAnalyzer(self)
-
+        
         self.plotter = Plotter(features, self._style_config())
-
+        
+        self.gradio_interface()
 
     def _style_config(self) -> dict:
         return {
@@ -1145,7 +1146,7 @@ class NetworkInterface(NetworkEquations):
             self.handle_downloads(tabs)
             self.handle_comparison_downloads(tabs)
             self.handle_boolean_to_fuzzy(tabs)
-        return demo.launch(share=False)
+        return demo.launch(share=True)
 
     # ============================================================
     # CALLBACKS DE SIMULACIÓN
