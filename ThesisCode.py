@@ -1557,7 +1557,17 @@ class NetworkInterface(NetworkEquations):
             })
     
         return results
+import argparse
 
+def main():
+    parser = argparse.ArgumentParser(description="Macrophage–T cell network simulator")
+    parser.add_argument("--share", action="store_true",
+                        help="Crea un enlace público temporal (necesario en Colab)")
+    args = parser.parse_args()
+
+    app = NetworkInterface(SUBNETWORKS)
+    demo = app.gradio_interface()      # el objeto gr.Blocks que hoy se lanza
+    demo.launch(share=args.share)
 
 if __name__ == "__main__":
-    network = NetworkInterface(SUBNETWORKS)
+    main()
